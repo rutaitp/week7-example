@@ -29,7 +29,7 @@ app.use(express.static('public'));
 app.use(express.json()); //12. parse the data
 
 //Listen
-let port = 3000;
+let port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log('Server listening on localhost:', port);
 });
